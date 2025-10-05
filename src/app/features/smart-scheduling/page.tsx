@@ -16,6 +16,30 @@ export const metadata = {
     "best time to publish",
     "seo content scheduling",
   ],
+  openGraph: {
+    title: "Smart Scheduling | SEO Automation",
+    description: "Analyzes traffic patterns and publishes content at optimal times for maximum visibility.",
+    url: "https://seoautomation.com/features/smart-scheduling",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Smart Scheduling",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Smart Scheduling | SEO Automation",
+    description: "Publish content at optimal times for maximum visibility.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/smart-scheduling",
+  },
 };
 
 export default function SmartSchedulingPage() {

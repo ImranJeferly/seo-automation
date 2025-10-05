@@ -16,6 +16,30 @@ export const metadata = {
     "nextjs library",
     "nextjs automation",
   ],
+  openGraph: {
+    title: "Next.js Native Integration | SEO Automation",
+    description: "Works with App Router, Pages Router, static exports, ISR, and SSG. Zero config required.",
+    url: "https://seoautomation.com/features/nextjs-native",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Next.js Native Integration",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Native Integration | SEO Automation",
+    description: "Built specifically for Next.js with zero configuration.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/nextjs-native",
+  },
 };
 
 export default function NextJSNativePage() {

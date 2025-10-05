@@ -16,6 +16,30 @@ export const metadata = {
     "url indexing automation",
     "instant indexing",
   ],
+  openGraph: {
+    title: "Multi-Platform Indexing | SEO Automation",
+    description: "Submit URLs to 50+ search engines simultaneously for instant indexing.",
+    url: "https://seoautomation.com/features/multi-platform-indexing",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Multi-Platform Indexing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Multi-Platform Indexing | SEO Automation",
+    description: "Submit URLs to 50+ search engines simultaneously.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/multi-platform-indexing",
+  },
 };
 
 export default function MultiPlatformIndexingPage() {

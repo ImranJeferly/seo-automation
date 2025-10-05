@@ -16,6 +16,30 @@ export const metadata = {
     "seo dashboard",
     "automated seo reports",
   ],
+  openGraph: {
+    title: "Analytics & Reporting | SEO Automation",
+    description: "Track rankings, impressions, clicks, and indexing status in real-time.",
+    url: "https://seoautomation.com/features/analytics-reporting",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Analytics & Reporting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analytics & Reporting | SEO Automation",
+    description: "Real-time SEO analytics and automated reporting.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/analytics-reporting",
+  },
 };
 
 export default function AnalyticsReportingPage() {

@@ -16,6 +16,30 @@ export const metadata = {
     "ai copywriting tool",
     "automated blog writing",
   ],
+  openGraph: {
+    title: "AI Content Generation | SEO Automation",
+    description: "GPT-4o powered engine creates blog posts that pass AI detection. Trained on 10,000+ top-ranking articles.",
+    url: "https://seoautomation.com/features/ai-content-generation",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Content Generation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Content Generation | SEO Automation",
+    description: "GPT-4o powered engine creates blog posts that pass AI detection.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/ai-content-generation",
+  },
 };
 
 export default function AIContentGenerationPage() {

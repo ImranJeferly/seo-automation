@@ -16,6 +16,30 @@ export const metadata = {
     "seo keyword tool",
     "automated keyword research",
   ],
+  openGraph: {
+    title: "Keyword Research | SEO Automation",
+    description: "Identifies high-opportunity topics and generates content briefs automatically.",
+    url: "https://seoautomation.com/features/keyword-research",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Keyword Research",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Keyword Research | SEO Automation",
+    description: "Automated keyword research with Ahrefs and SEMrush integration.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/keyword-research",
+  },
 };
 
 export default function KeywordResearchPage() {

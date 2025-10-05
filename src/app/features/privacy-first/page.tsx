@@ -16,6 +16,30 @@ export const metadata = {
     "secure seo tool",
     "data privacy",
   ],
+  openGraph: {
+    title: "Privacy-First | SEO Automation",
+    description: "GDPR compliant with no data retention. Your API keys stay secure.",
+    url: "https://seoautomation.com/features/privacy-first",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Privacy-First",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy-First | SEO Automation",
+    description: "Complete privacy and security for your SEO operations.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/privacy-first",
+  },
 };
 
 export default function PrivacyFirstPage() {

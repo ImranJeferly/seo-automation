@@ -16,6 +16,30 @@ export const metadata = {
     "ai content editor",
     "content quality control",
   ],
+  openGraph: {
+    title: "Content Review | SEO Automation",
+    description: "Preview and edit AI-generated content before publishing. Full editorial control.",
+    url: "https://seoautomation.com/features/content-review",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Content Review",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Review | SEO Automation",
+    description: "Full editorial control over AI-generated content.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/content-review",
+  },
 };
 
 export default function ContentReviewPage() {

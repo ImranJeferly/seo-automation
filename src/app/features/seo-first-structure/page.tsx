@@ -16,6 +16,30 @@ export const metadata = {
     "technical seo",
     "on-page seo automation",
   ],
+  openGraph: {
+    title: "SEO-First Structure | SEO Automation",
+    description: "Proper H1-H6 hierarchy, optimized meta tags, and structured data automatically generated for every page.",
+    url: "https://seoautomation.com/features/seo-first-structure",
+    siteName: "SEO Automation",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "SEO-First Structure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO-First Structure | SEO Automation",
+    description: "Proper H1-H6 hierarchy and structured data automatically generated.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://seoautomation.com/features/seo-first-structure",
+  },
 };
 
 export default function SEOFirstStructurePage() {
