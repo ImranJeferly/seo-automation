@@ -40,7 +40,7 @@ export default function ContentReviewPage() {
             <CardContent className="p-12">
               <h2 className="text-3xl font-bold mb-6">Full Control Over Your Content</h2>
               <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
-                Automation doesn't mean losing control. Our content review system lets you preview every draft before it 
+                Automation doesn&apos;t mean losing control. Our content review system lets you preview every draft before it 
                 goes live. Make quick edits, adjust the tone, add personal touches, or approve everything with one click. 
                 You decide what represents your brand.
               </p>

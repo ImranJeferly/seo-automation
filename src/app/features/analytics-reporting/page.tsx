@@ -40,7 +40,7 @@ export default function AnalyticsReportingPage() {
             <CardContent className="p-12">
               <h2 className="text-3xl font-bold mb-6">Measure What Matters</h2>
               <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
-                Understanding your SEO performance shouldn't require piecing together data from multiple tools. Our analytics 
+                Understanding your SEO performance shouldn&apos;t require piecing together data from multiple tools. Our analytics 
                 dashboard gives you everything in one place — rankings, traffic, indexing status, and more. Track progress 
                 over time and prove ROI with exportable reports.
               </p>

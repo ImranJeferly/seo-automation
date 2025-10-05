@@ -41,7 +41,7 @@ export default function NextJSNativePage() {
               <h2 className="text-3xl font-bold mb-6">Built Specifically for Next.js</h2>
               <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
                 Unlike generic SEO tools that require complex integrations, our library is built from the ground up for Next.js. 
-                Whether you're using the new App Router, classic Pages Router, or static exports — everything works seamlessly. 
+                Whether you&apos;re using the new App Router, classic Pages Router, or static exports — everything works seamlessly. 
                 No configuration files, no breaking changes, no headaches. Just install and start automating.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
@@ -54,7 +54,7 @@ export default function NextJSNativePage() {
                 <div className="bg-black border border-zinc-800 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-emerald-400 mb-3">Zero Configuration</h3>
                   <p className="text-zinc-400">
-                    Install via npm, add your API key, and you're done. No webpack configs, no middleware setup required.
+                    Install via npm, add your API key, and you&apos;re done. No webpack configs, no middleware setup required.
                   </p>
                 </div>
               </div>

@@ -41,7 +41,7 @@ export default function PrivacyFirstPage() {
               <h2 className="text-3xl font-bold mb-6">Your Data, Your Control</h2>
               <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
                 In an era where data breaches make headlines daily, we take privacy seriously. Your API keys are encrypted 
-                at rest and in transit. We don't retain your content, don't share your data with third parties, and comply 
+                at rest and in transit. We don&apos;t retain your content, don&apos;t share your data with third parties, and comply 
                 with GDPR, CCPA, and other privacy regulations. No external branding means your content stays truly yours.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
@@ -54,7 +54,7 @@ export default function PrivacyFirstPage() {
                 <div className="bg-black border border-zinc-800 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-emerald-400 mb-3">Zero Data Retention</h3>
                   <p className="text-zinc-400">
-                    We don't store your generated content or analytics data. Everything stays on your infrastructure.
+                    We don&apos;t store your generated content or analytics data. Everything stays on your infrastructure.
                   </p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function PrivacyFirstPage() {
                 <div className="text-4xl mb-4">🏷️</div>
                 <h3 className="text-xl font-semibold mb-3">White Label</h3>
                 <p className="text-zinc-400">
-                  No "Powered by" badges or external branding. Your content appears 100% as your own creation.
+                  No &quot;Powered by&quot; badges or external branding. Your content appears 100% as your own creation.
                 </p>
               </CardContent>
             </Card>

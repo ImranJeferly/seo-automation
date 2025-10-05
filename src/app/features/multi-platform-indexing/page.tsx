@@ -40,8 +40,8 @@ export default function MultiPlatformIndexingPage() {
             <CardContent className="p-12">
               <h2 className="text-3xl font-bold mb-6">Get Indexed in Minutes, Not Weeks</h2>
               <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
-                Don't wait for search engines to discover your content. Our multi-platform indexing system automatically 
-                submits your new pages to all major search engines the moment they're published. Get traffic faster with 
+                Don&apos;t wait for search engines to discover your content. Our multi-platform indexing system automatically 
+                submits your new pages to all major search engines the moment they&apos;re published. Get traffic faster with 
                 instant indexing across Google, Bing, Yandex, and 50+ other platforms.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
