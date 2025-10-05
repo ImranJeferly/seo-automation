@@ -192,7 +192,7 @@ export default function Navbar() {
                     className="block px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
                     onClick={() => setShowGuidesDropdown(false)}
                   >
-                    � Marketing Guide
+                    Marketing Guide
                   </a>
                 </div>
               )}
