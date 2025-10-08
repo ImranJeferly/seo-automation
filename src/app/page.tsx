@@ -1067,7 +1067,10 @@ export default function RootLayout({ children }) {
             <Link href="/features/smart-scheduling" className="group cursor-pointer">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚡</span>
-                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">Smart Scheduling</h3>
+                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">
+                  Smart Scheduling
+                  <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                </h3>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">
                 Analyzes traffic patterns and publishes content at optimal times. Set daily, weekly, or custom schedules.
@@ -1077,7 +1080,10 @@ export default function RootLayout({ children }) {
             <Link href="/features/keyword-research" className="group cursor-pointer">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🔍</span>
-                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">Keyword Research</h3>
+                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">
+                  Keyword Research
+                  <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                </h3>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">
                 Connects to Ahrefs, SEMrush, or built-in research. Identifies high-opportunity topics and generates content briefs.
@@ -1107,7 +1113,10 @@ export default function RootLayout({ children }) {
             <Link href="/features/analytics-reporting" className="group cursor-pointer">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">📈</span>
-                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">Analytics & Reporting</h3>
+                <h3 className="font-semibold text-lg group-hover:text-emerald-400 transition-colors">
+                  Analytics & Reporting
+                  <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                </h3>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">
                 Track rankings, impressions, clicks, and indexing status. Export reports for clients or stakeholders.

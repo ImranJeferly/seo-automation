@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut, User } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
@@ -123,14 +124,20 @@ export default function Navbar() {
                     className="block px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
                     onClick={() => setShowFeaturesDropdown(false)}
                   >
-                    Smart Scheduling
+                    <span className="flex items-center justify-between">
+                      Smart Scheduling
+                      <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                    </span>
                   </a>
                   <a 
                     href="/features/keyword-research" 
                     className="block px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
                     onClick={() => setShowFeaturesDropdown(false)}
                   >
-                    Keyword Research
+                    <span className="flex items-center justify-between">
+                      Keyword Research
+                      <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                    </span>
                   </a>
                   <a 
                     href="/features/nextjs-native" 
@@ -151,7 +158,10 @@ export default function Navbar() {
                     className="block px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
                     onClick={() => setShowFeaturesDropdown(false)}
                   >
-                    Analytics & Reporting
+                    <span className="flex items-center justify-between">
+                      Analytics & Reporting
+                      <span className="ml-2 px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 rounded-full">PRO</span>
+                    </span>
                   </a>
                   <a 
                     href="/features/privacy-first" 
