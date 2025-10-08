@@ -97,46 +97,61 @@ export default function SEOFirstStructurePage() {
       />
 
       <Navbar />
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#0f0f0f_1px,transparent_1px),linear-gradient(to_bottom,#0f0f0f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
       
-      <main className="pt-24 pb-16">
+      <main className="flex-1 relative mt-16">
         {/* Hero Section */}
-        <section className="relative max-w-7xl mx-auto px-6 py-32">
-          {/* Grid Background */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.025)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)] pointer-events-none" />
-          
-          <div className="relative text-center mb-20">
-            <Badge variant="outline" className="mb-6 border-emerald-800 text-emerald-400 bg-emerald-950">
-              Technical SEO
+        <section className="relative max-w-6xl mx-auto px-6 py-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="outline" className="mb-8 border-zinc-800 text-zinc-400 bg-zinc-950">
+              ⚡ Technical SEO Excellence
             </Badge>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-white via-white to-zinc-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl sm:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+              <span className="bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
                 SEO-First Structure
               </span>
+              <br />
+              Built for Rankings
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-400 max-w-4xl mx-auto leading-relaxed mb-12">
-              Enterprise-grade technical SEO automation. Perfect HTML5 structure, heading hierarchy, 
-              meta tags, Open Graph, and JSON-LD structured data — automatically generated for every page.
+            <p className="text-xl text-zinc-400 mb-6 leading-relaxed max-w-3xl mx-auto">
+              Enterprise-grade technical SEO automation with perfect HTML5 structure, heading hierarchy, 
+              meta tags, Open Graph, Twitter Cards, and JSON-LD structured data—automatically generated 
+              for every page to maximize search engine visibility.
             </p>
+            
+            {/* Social Proof Stats */}
+            <div className="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto">
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">100%</div>
+                <div className="text-sm text-zinc-500">SEO Compliance</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">15-20%</div>
+                <div className="text-sm text-zinc-500">Ranking Boost</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-sm text-zinc-500">SEO Checks</div>
+              </div>
+            </div>
 
-            {/* Stats Bar */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {[
-                { value: "100%", label: "SEO Compliance" },
-                { value: "15-20%", label: "Ranking Boost" },
-                { value: "50+", label: "SEO Checks" },
-                { value: "<1ms", label: "Generation Time" }
-              ].map((stat, index) => (
-                <div key={index} className="bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-emerald-400 mb-2">{stat.value}</div>
-                  <div className="text-sm text-zinc-500">{stat.label}</div>
-                </div>
-              ))}
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/signup">
+                <Button size="lg" className="bg-white text-black hover:bg-zinc-200 text-base px-8">
+                  Get Started Free
+                </Button>
+              </Link>
+              <Link href="#technical-overview">
+                <Button size="lg" variant="outline" className="border-zinc-800 text-white hover:bg-zinc-900 text-base px-8">
+                  View Technical Details
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Technical Overview */}
-        <section className="max-w-7xl mx-auto px-6 py-20">
+        <section id="technical-overview" className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-20">
             <Badge variant="outline" className="mb-6 border-zinc-800 text-zinc-400 bg-zinc-950">
               Technical Foundation
