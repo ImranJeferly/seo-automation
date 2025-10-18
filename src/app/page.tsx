@@ -122,7 +122,7 @@ export default function RootLayout({ children }) {
 
             <h1 className="text-6xl sm:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
               <span className="bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
-                Automate Your SEO sigma
+                Automate Your SEO
               </span>
               <br />
               10x Your Traffic
