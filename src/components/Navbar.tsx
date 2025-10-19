@@ -13,8 +13,10 @@ export default function Navbar() {
   const [loading, setLoading] = useState(true);
   const [showFeaturesDropdown, setShowFeaturesDropdown] = useState(false);
   const [showGuidesDropdown, setShowGuidesDropdown] = useState(false);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const guidesDropdownRef = useRef<HTMLDivElement>(null);
+  const userDropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -35,16 +37,19 @@ export default function Navbar() {
       if (guidesDropdownRef.current && !guidesDropdownRef.current.contains(event.target as Node)) {
         setShowGuidesDropdown(false);
       }
+      if (userDropdownRef.current && !userDropdownRef.current.contains(event.target as Node)) {
+        setShowUserDropdown(false);
+      }
     }
 
-    if (showFeaturesDropdown || showGuidesDropdown) {
+    if (showFeaturesDropdown || showGuidesDropdown || showUserDropdown) {
       document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showFeaturesDropdown, showGuidesDropdown]);
+  }, [showFeaturesDropdown, showGuidesDropdown, showUserDropdown]);
 
   const handleLogout = async () => {
     try {
@@ -217,40 +222,103 @@ export default function Navbar() {
               <div className="w-20 h-9 bg-zinc-800/50 animate-pulse rounded-md"></div>
             ) : user ? (
               <div className="flex items-center gap-3">
-                {/* User Info */}
-                <div className="flex items-center gap-2">
-                  {user.photoURL ? (
-                    <div className="w-8 h-8 rounded-full border border-zinc-700 overflow-hidden bg-zinc-800">
-                      <img
-                        src={user.photoURL}
-                        alt={user.displayName || "User"}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                      />
+                {/* User Dropdown */}
+                <div className="relative" ref={userDropdownRef}>
+                  <button
+                    onClick={() => setShowUserDropdown(!showUserDropdown)}
+                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    {user.photoURL ? (
+                      <div className="w-8 h-8 rounded-full border border-zinc-700 overflow-hidden bg-zinc-800">
+                        <img
+                          src={user.photoURL}
+                          alt={user.displayName || "User"}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                        <span className="text-black text-sm font-bold">
+                          {(user.displayName || user.email)?.charAt(0).toUpperCase()}
+                        </span>
+                      </div>
+                    )}
+                    <div className="hidden sm:block text-left">
+                      <p className="text-sm font-medium text-white">
+                        {user.displayName || user.email?.split("@")[0]}
+                      </p>
                     </div>
-                  ) : (
-                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center">
-                      <span className="text-emerald-400 text-sm font-medium">
-                        {(user.displayName || user.email)?.charAt(0).toUpperCase()}
-                      </span>
+                    <svg 
+                      className={`w-4 h-4 text-zinc-400 transition-transform ${showUserDropdown ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {/* User Dropdown Menu */}
+                  {showUserDropdown && (
+                    <div className="absolute top-full right-0 mt-2 w-56 bg-black backdrop-blur-md border border-zinc-800/50 rounded-md shadow-xl py-2 z-50">
+                      <div className="px-4 py-3 border-b border-zinc-800/50">
+                        <p className="text-sm font-medium text-white truncate">{user.email}</p>
+                        <p className="text-xs text-zinc-500 mt-1">
+                          {user.emailVerified ? '✓ Verified' : '⚠ Not Verified'}
+                        </p>
+                      </div>
+                      
+                      <Link 
+                        href="/account" 
+                        className="flex items-center gap-3 px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
+                        onClick={() => setShowUserDropdown(false)}
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        Account Settings
+                      </Link>
+                      
+                      <Link 
+                        href="/account?tab=billing" 
+                        className="flex items-center gap-3 px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
+                        onClick={() => setShowUserDropdown(false)}
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
+                        Billing
+                      </Link>
+                      
+                      <Link 
+                        href="/account?tab=security" 
+                        className="flex items-center gap-3 px-4 py-2 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors"
+                        onClick={() => setShowUserDropdown(false)}
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        Security
+                      </Link>
+
+                      <div className="border-t border-zinc-800/50 my-2"></div>
+
+                      <button
+                        onClick={() => {
+                          setShowUserDropdown(false);
+                          handleLogout();
+                        }}
+                        className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-500/10 transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        Sign Out
+                      </button>
                     </div>
                   )}
-                  <div className="hidden sm:block">
-                    <p className="text-sm font-medium text-white">
-                      {user.displayName || user.email?.split("@")[0]}
-                    </p>
-                  </div>
                 </div>
-
-                {/* Logout Button */}
-                <Button
-                  onClick={handleLogout}
-                  size="sm"
-                  className="bg-zinc-900/50 hover:bg-zinc-800/50 text-white border border-zinc-800/50 h-9 px-4 text-sm"
-                  variant="outline"
-                >
-                  Logout
-                </Button>
               </div>
             ) : (
               <div className="flex items-center gap-2">
